@@ -29,7 +29,7 @@ npm run start:dev
 
 - ### Billings Controller
 
-#### POST /calculate
+#### POST /api/calculate
 
 Calculates the final amount payable in the target currency after applying discounts.
 

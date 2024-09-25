@@ -54,9 +54,6 @@ describe('BillingsService', () => {
     expect(discountCustomerLessThan2Years).toBe(0);
   });
 
-  // Add more test cases as needed for other methods in BillingsService
-
-  // Optionally, you can also mock methods of CurrencyExchangeService and test the create method
   it('should calculate the final amount and return a response', async () => {
     // Mock request and response objects
     const req: any = {
@@ -81,7 +78,5 @@ describe('BillingsService', () => {
     };
 
     const response = await calculateService.calculate(req, res);
-
-    // Add appropriate assertions to test the response
   });
 });

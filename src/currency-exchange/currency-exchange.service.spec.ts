@@ -61,18 +61,17 @@ describe('CurrencyExchangeService', () => {
       .mockResolvedValue(mockExchangeRates);
 
     const convertedAmount = await currencyExchangeService.convertAmountToUSD(
-      100,
+      221,
       'EUR',
     );
 
-    // Add appropriate assertions to test the conversion
+    expect(convertedAmount).toEqual(260);
   });
 
   it('should convert amount to target currency', async () => {
     const mockExchangeRates = {
       EUR: 0.85,
       GBP: 0.73,
-      // Add more rates as needed for testing
     };
 
     jest
@@ -80,8 +79,7 @@ describe('CurrencyExchangeService', () => {
       .mockResolvedValue(mockExchangeRates);
 
     const convertedAmount =
-      await currencyExchangeService.convertAmountToTargetCurrency(100, 'EUR');
-
-    // Add appropriate assertions to test the conversion
+      await currencyExchangeService.convertAmountToTargetCurrency(260, 'EUR');
+    expect(convertedAmount).toEqual(221);
   });
 });

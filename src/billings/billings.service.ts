@@ -73,7 +73,6 @@ export class BillingsService {
           break;
         }
       default:
-        discountPercentage = 0;
         break;
     }
     return discountPercentage;
